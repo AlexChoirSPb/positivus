@@ -1,0 +1,98 @@
+.header {
+	padding-top: 60px;
+
+	@include desktop {
+		padding-top: 30px;
+	}
+
+	// .header__inner
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 40px;
+
+		@include tablet {
+			column-gap: 30px;
+		}
+	}
+
+	// .header__logo
+	&__logo {
+		@include tablet {
+			max-width: 120px;
+		}
+	}
+
+	// .header__menu
+	&__menu {
+		margin-left: auto;
+
+		font-size: 20px;
+
+		@include desktop {
+			font-size: 18px;
+		}
+
+		@include tablet {
+			font-size: 16px;
+		}
+		
+	}
+
+	// .header__menu-list
+	&__menu-list {
+		display: flex;
+		align-items: center;
+		column-gap: 40px;
+
+		@include desktop {
+			column-gap: 20px;
+		}
+	}
+
+	// .header__menu-item
+	&__menu-item {
+	}
+
+	// .header__menu-link
+	&__menu-link {
+		position: relative;
+		height: 48px;
+		display: inline-flex;
+		align-items: center;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			translate: -50%;
+			width: 0;
+			height: 2px;
+			background-color: currentColor;
+			transition-duration: inherit;
+		}
+
+		@include hover {
+			&::after {
+				width: 100%;
+			}
+		}
+
+	}
+
+	// .header__button
+	&__button {
+
+		@include desktop {
+			height: 48px;
+			padding-inline: 18px;
+			font-size: 16px;
+		}
+	}
+
+	// .header__burger-button
+	&__burger-button {
+	}
+}
