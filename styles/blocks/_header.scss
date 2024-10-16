@@ -5,6 +5,10 @@
 		padding-top: 30px;
 	}
 
+	@include mobile {
+		padding-top: 15px;
+	}
+
 	// .header__inner
 	&__inner {
 		display: flex;
@@ -21,6 +25,10 @@
 	&__logo {
 		@include tablet {
 			max-width: 120px;
+		}
+
+		@include mobile {
+			min-width: 140px;
 		}
 	}
 
