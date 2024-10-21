@@ -4,4 +4,18 @@
 	&--hidden-x {
 		overflow: hidden;
 	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		column-gap: 40px;
+
+		&:not(:last-child) {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__description {
+		max-width: 580px;
+	}
 }
