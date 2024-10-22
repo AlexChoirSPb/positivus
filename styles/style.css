@@ -324,40 +324,50 @@ h4 {
 }
 
 .grid {
-  --gridColums: 1;
+  --gridColumns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gridColums), 1fr);
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
   gap: 40px;
 }
+@media (max-width: 767px) {
+  .grid {
+    gap: 30px;
+  }
+}
 .grid--2 {
-  --gridColums: 2;
+  --gridColumns: 2;
 }
 .grid--3 {
-  --gridColums: 3;
+  --gridColumns: 3;
 }
 .grid--4 {
-  --gridColums: 4;
+  --gridColumns: 4;
 }
 .grid--5 {
-  --gridColums: 5;
+  --gridColumns: 5;
 }
 .grid--6 {
-  --gridColums: 6;
+  --gridColumns: 6;
 }
 .grid--7 {
-  --gridColums: 7;
+  --gridColumns: 7;
 }
 .grid--8 {
-  --gridColums: 8;
+  --gridColumns: 8;
 }
 .grid--9 {
-  --gridColums: 9;
+  --gridColumns: 9;
 }
 .grid--10 {
-  --gridColums: 10;
+  --gridColumns: 10;
 }
 .grid--11 {
-  --gridColums: 11;
+  --gridColumns: 11;
+}
+@media (max-width: 1023px) {
+  .grid--2 {
+    --gridColumns: 1;
+  }
 }
 
 .burger-button {
@@ -601,6 +611,21 @@ h4 {
 .section__header:not(:last-child) {
   margin-bottom: 80px;
 }
+@media (max-width: 767px) {
+  .section__header:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .section__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+  }
+}
 .section__description {
   max-width: 580px;
 }
@@ -771,10 +796,20 @@ h4 {
 .services__list:not(:last-child) {
   margin-bottom: 100px;
 }
+@media (max-width: 767px) {
+  .services__list:not(:last-child) {
+    margin-bottom: 70px;
+  }
+}
 
 .banner {
   --bannerImageOffsetY: 24px;
   padding-block: var(--bannerImageOffsetY);
+}
+@media (max-width: 1023px) {
+  .banner {
+    --bannerImageOffsetY: 0;
+  }
 }
 .banner__inner {
   display: -webkit-box;
@@ -803,11 +838,27 @@ h4 {
           align-items: start;
   row-gap: 20px;
 }
+@media (max-width: 1023px) {
+  .banner__body {
+    padding: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .banner__body {
+    row-gap: 20px;
+  }
+}
 .banner__description {
   max-width: 500px;
 }
 .banner__image {
   margin-block: calc(var(--bannerImageOffsetY) * -1);
+}
+@media (max-width: 1023px) {
+  .banner__image {
+    max-width: 40%;
+    height: auto;
+  }
 }
 
 .service-card {
@@ -828,6 +879,13 @@ h4 {
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
 }
+@media (max-width: 767px) {
+  .service-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 27px;
+  }
+}
 .service-card--accent-bg {
   background-color: var(--color-accent);
 }
@@ -847,9 +905,25 @@ h4 {
           justify-content: space-between;
   row-gap: 30px;
 }
+@media (max-width: 767px) {
+  .service-card__body {
+    display: contents;
+  }
+}
 .service-card__image {
   -ms-flex-item-align: center;
       align-self: center;
+}
+@media (max-width: 1280px) {
+  .service-card__image {
+    max-width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .service-card__image {
+    max-width: 165px;
+  }
 }
 .service-card__title {
   display: -webkit-box;
@@ -862,6 +936,11 @@ h4 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+}
+@media (max-width: 767px) {
+  .service-card__title {
+    grid-column: -1/1;
+  }
 }
 .service-card__link {
   --serviceCardLinkIconColor: var(--color-accent);
@@ -886,6 +965,12 @@ h4 {
     opacity: 0.7;
   }
 }
+@media (max-width: 767px) {
+  .service-card__link {
+    -ms-flex-item-align: end;
+        align-self: end;
+  }
+}
 .service-card__link--light {
   --serviceCardLinkIconColor: var(--color-dark);
   color: var(--color-light);
@@ -907,4 +992,19 @@ h4 {
 }
 .service-card__link-icon-wrapper svg {
   color: var(--serviceCardLinkIconColor);
+}
+@media (max-width: 767px) {
+  .service-card__link-label {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
 }/*# sourceMappingURL=style.css.map */
