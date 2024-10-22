@@ -1,0 +1,10 @@
+.team {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+
+	&__button {
+		align-self: end;
+		min-width: 269px;
+	}
+}
