@@ -1570,7 +1570,7 @@ h4, .h4 {
   padding-bottom: 54px;
   color: var(--color-light);
   background-color: var(--color-dark);
-  border-radius: car(--border-radius-large);
+  border-radius: var(--border-radius-large);
   overflow-x: hidden;
 }
 @media (max-width: 1023px) {
