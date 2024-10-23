@@ -1219,6 +1219,9 @@ h4, .h4 {
        -moz-column-gap: 20px;
             column-gap: 20px;
   }
+  .studies__list::-webkit-scrollbar {
+    width: 0;
+  }
 }
 .studies__item {
   --studiesItemPaddingX: 64px;

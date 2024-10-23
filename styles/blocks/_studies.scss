@@ -21,6 +21,10 @@
 			width: 100vw;
 			overflow-x: scroll;
 			column-gap: 20px;
+
+			&::-webkit-scrollbar {
+				width: 0;
+			 }
 		}
 	}
 
