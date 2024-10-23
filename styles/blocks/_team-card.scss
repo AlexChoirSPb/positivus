@@ -7,6 +7,10 @@
 
 	height: 100%;
 
+	@include mobile {
+		padding-inline: 50px;
+	}
+
 	&__header {
 		display: flex;
 	}
@@ -47,8 +51,14 @@
 	}
 
 	&__body {
-		padding-top: 28px;
-		margin-top: 28px;
+		--teamCardBodyMarginTop: 28px;
+
+		padding-top: var(--teamCardBodyMarginTop);
+		margin-top: var(--teamCardBodyMarginTop);
 		border-top: var(--border);
+
+		@include mobile {
+			--teamCardBodyMarginTop: 20px;
+		}
 	}
 }
