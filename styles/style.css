@@ -167,14 +167,14 @@ svg * {
 }
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+  src: url("../fonts/SpaceGrotesk-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2");
+  src: url("../fonts/SpaceGrotesk-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -1748,7 +1748,7 @@ h4, .h4 {
   translate: -50% -50%;
   height: calc(100% - var(--contactUsImageOffsetY) * 2);
   aspect-ratio: 1;
-  background: url("../../images/contact-us-bg.svg") center/contain no-repeat;
+  background: url("../images/contact-us-bg.svg") center/contain no-repeat;
 }
 @media (max-width: 1023px) {
   .contact-us::after {
